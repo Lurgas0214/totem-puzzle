@@ -1,0 +1,37 @@
+
+.totem-winning-screen{
+    display: none;
+}
+
+.totem-winning-backdrop,.totem-winning-message{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.totem-winning-backdrop{
+    background-color: #000000;
+    z-index: 1032;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.5;
+}
+
+.totem-winning-message{
+    background-color: black;
+    margin: 25vh 25vw;
+    padding: 15px;
+    z-index: 2048;
+    height: 50vh;
+    width: 50vw;
+}
+
+.dancing-horde{
+    background: url("../../res/images/dancingHorde.gif") center no-repeat;
+    z-index: 4064;
+    height: 231px;
+}
+
+.show{
+    display: block;
+}

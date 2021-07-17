@@ -10,7 +10,7 @@
 }
 
 .totem-image{
-    background-image: url(../res/images/totem.png);
+    background-image: url(../../res/images/totem.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,16 +22,16 @@
 /*==========================================================*/
 @keyframes changeToRed {
     0%{
-        background-image: url(../res/images/blue.png);
+        background-image: url(../../res/images/blue.png);
     }
     100%{
-        background-image: url(../res/images/red.png);
+        background-image: url(../../res/images/red.png);
         transform: rotate( 360deg );
     }
 }
 .red {
     animation: changeToRed 0.5s ease-out;
-    background-image: url(../res/images/red.png);
+    background-image: url(../../res/images/red.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,16 +39,16 @@
 
 @keyframes changeToBlue {
     0% {
-        background-image: url(../res/images/red.png);
+        background-image: url(../../res/images/red.png);
     }
     100%{
-        background-image: url(../res/images/blue.png);
+        background-image: url(../../res/images/blue.png);
         transform: rotate( 360deg );
     }
 }
 .blue {
     animation: changeToBlue 0.5s ease-out;
-    background-image: url(../res/images/blue.png);
+    background-image: url(../../res/images/blue.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
