@@ -1,0 +1,56 @@
+.center{
+    text-align: center;
+}
+
+.totem {
+    margin: 5px 5px 5px 5px;
+    border: 3px solid #999ea0;
+    border-radius: 75px;
+    cursor: pointer;
+}
+
+.totem-image{
+    background-image: url(../res/images/totem.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+}
+
+/*  Animations  */
+/*==========================================================*/
+@keyframes changeToRed {
+    0%{
+        background-image: url(../res/images/blue.png);
+    }
+    100%{
+        background-image: url(../res/images/red.png);
+        transform: rotate( 360deg );
+    }
+}
+.red {
+    animation: changeToRed 0.5s ease-out;
+    background-image: url(../res/images/red.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes changeToBlue {
+    0% {
+        background-image: url(../res/images/red.png);
+    }
+    100%{
+        background-image: url(../res/images/blue.png);
+        transform: rotate( 360deg );
+    }
+}
+.blue {
+    animation: changeToBlue 0.5s ease-out;
+    background-image: url(../res/images/blue.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/*==========================================================*/
