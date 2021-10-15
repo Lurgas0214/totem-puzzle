@@ -1,11 +1,10 @@
 import React from "react";
 import TotemButton from "./TotemButton";
 
-const TotemTable = ({table, onClickHandle}) => {
+const TotemTable = ({ table, onClickHandle }) => {
     return (
-        <div>
-            <table>
-                <tbody>
+        <table>
+            <tbody>
                 {table.rows.map((row, ri) => {
                     return (
                         <tr key={"row" + ri}>
@@ -24,9 +23,8 @@ const TotemTable = ({table, onClickHandle}) => {
                         </tr>
                     )
                 })}
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
     );
 };
 

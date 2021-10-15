@@ -1,5 +1,5 @@
 import React from "react";
-import {Component} from "react";
+import { Component } from "react";
 import TotemTable from "./TotemTable";
 import TotemWinningScreen from "./TotemWinningScreen";
 
@@ -12,16 +12,16 @@ const getTableFromConfig = (config) => {
 
         values.forEach(value => {
             const bool = value === "1";
-            columns.push({value: bool});
+            columns.push({ value: bool });
         });
 
-        rows.push({columns: columns});
+        rows.push({ columns: columns });
     });
 
-    return {rows};
+    return { rows };
 };
 
-class TotemPuzzle extends Component{
+class TotemPuzzle extends Component {
     constructor(props) {
         super(props);
 
@@ -35,18 +35,18 @@ class TotemPuzzle extends Component{
     }
 
     reset = () => {
-        const table = {...this.state.origin};
-        this.setState({table, solved: false});
+        const table = { ...this.state.origin };
+        this.setState({ table, solved: false });
     };
 
     toggleTotem = (table, ri, ci) => {
-        try{
+        try {
             table.rows[ri].columns[ci].value = !table.rows[ri].columns[ci].value;
-        }catch(ex){}
+        } catch (ex) { }
     };
 
     toggleTotems = (ric, cic) => {
-        let {table} = JSON.parse(JSON.stringify(this.state)),
+        let { table } = JSON.parse(JSON.stringify(this.state)),
             ria = ric - 1, rib = ric + 1, cil = cic - 1, cir = cic + 1;
 
         this.toggleTotem(table, ric, cic);
@@ -69,27 +69,27 @@ class TotemPuzzle extends Component{
     onClickHandler = (ric, cic) => {
         const table = this.toggleTotems(ric, cic);
         const solved = this.checkIfSolved(table);
-        this.setState({table, solved});
+        this.setState({ table, solved });
     };
 
-    render(){
+    render() {
         return (
-            <div className="">
+            <div>
                 <h3>Totem Puzzle - React-App</h3>
 
-                <TotemTable
-                    table={this.state.table}
-                    onClickHandle={this.onClickHandler}
-                />
+                <div>try switching all fire totems to water totems</div>
 
-                <div className="row justify-content-center">
-                    <div className="col">
-                        <div
-                            className="btn btn-outline-info"
-                            onClick={this.reset}
-                        >reset</div>
-                    </div>
+                <div className="puzzle-wrapper">
+                    <TotemTable
+                        table={this.state.table}
+                        onClickHandle={this.onClickHandler}
+                    />
                 </div>
+
+                <div
+                    className="btn btn-outline-info"
+                    onClick={this.reset}
+                >reset</div>
 
                 <TotemWinningScreen
                     show={this.state.solved}
