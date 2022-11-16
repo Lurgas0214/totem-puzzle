@@ -4,7 +4,11 @@ body {
 
 .App {
   text-align: center;
-  overflow: hidden;
+}
+
+.puzzle-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .App-header {
